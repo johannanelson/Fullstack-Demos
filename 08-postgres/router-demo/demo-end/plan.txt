@@ -1,0 +1,27 @@
+
+
+Wouldn't it be nice to have a way to get a single pokemon without having to write different queries for each different id? Let's use express!
+----------------------
+Create POKEMONROUTES.js
+10. First, make sure to export client in index. js so that it can be used in other places. Comment out all lines in try block except for client.connect()
+11. Require express, define app, and require client from index.js
+12. Write a route to get all pokemon
+13. Change start script to run pokemonRoutes, then run
+14. Write a route to get single pokemon and test that out
+IF TIME: show sql injection attack (pokemon/3; DROP TABLE pokemon;)
+15. Show placeholders instead of template literals
+
+Data flow: we're sending a request from a browser, look for the corresponding route. Our server acts like a client, when it requests data from the database using the pg client.
+
+-----------------------
+REORGANIZATION
+16. Place index.js inside db folder. Add routes folder and create new studentRoutes file. Rename studentRoutes to be the new index.js of our entire directory - new main entrypoint.
+
+STUDENTROUTES.JS
+17. Change from app to router in pokemonRoutes.js and export router.
+18. Require client
+19. Add app.use in index.js
+20. Add url specification and change routes in studentRoutes
+
+
+

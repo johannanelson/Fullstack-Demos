@@ -1,0 +1,38 @@
+VERY FIRST STEPS
+createdb hogwarts
+psql
+\c hogwarts (switch connection to hogwarts db)
+\i [copy-path-of-students.sql] (execute students.sql)
+\q
+
+
+----------------------
+STUDENTS.SQL
+1. Create the package.json (npm init -y)
+2. Install pg, nodemon, and express (npm install pg)
+3. Create index.js and create pg variable
+----------------------
+Create INDEX.js
+4. Add pg variable, and postgresUrl
+5. Create client object
+6. Add async connector function to connect client to db and add first query
+7. Call the connector function
+8. Add start script (nodemon index.js) and run
+9. Take a look at the table in postico and compare to console log
+----------------------
+
+
+
+ONLY IF TIME:
+Wouldn't it be nice to have a way to get a single pokemon without having to write different queries for each different id? Let's use express!
+----------------------
+Create POKEMONROUTES.js
+10. First, make sure to export client in index. js so that it can be used in other places. Comment out all lines in try block except for client.connect()
+11. Require express, define app, and require client
+12. Write a route to get all pokemon
+13. Change start script to run pokemonRoutes, then run
+14. Write a route to get single pokemon and test that out
+IF TIME: show sql injection attack (pokemon/3; DROP TABLE pokemon;)
+15. Show placeholders instead of template literals
+
+Data flow: we're sending a request from a browser, look for the corresponding route. Our server acts like a client, when it requests data from the database using the pg client.
