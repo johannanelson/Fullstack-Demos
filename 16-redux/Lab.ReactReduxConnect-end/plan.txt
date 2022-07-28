@@ -1,0 +1,24 @@
+React-Redux Connect lecture
+
+- Store.js holds our action types, creators and reducer
+- Hooking up component: 1) setting up state in component constructor will no longer be done in constructor; we’ll call getState() in constructor to get the current state in the store. 2) must also make sure we’re subscribing to changes; we have the initial state of our React component equalling the initial state in Redux. But if the state ever changes in Redux, we want our component state to update as well. We want these changes to mirror each other. So inside componentDidMount, subscribe to the store and setState() to store.getState() 3) we add a dispatch function so we can dispatch a certain action from our react component
+
+What does connect do?
+
+It’s a function that we’ll be importing from the react-redux library. Its job is to connect react components to the redux store. It removes the manual setup of connecting each of your react components to your redux store. You had to set up initial state, subscribe, and unsubscribe for each component. Now, instead of calling store.dispatch ourselves and importing store in each component file, we can just use the connect function
+
+We don’t really need most of our component code - so we can make our component into a functional component.
+
+Connect takes 2 parameters:
+1. mapStateToProps: tells connect which pieces of Redux state this component will have access to
+2. MapDispatchToProps: which actions the component will be able to dispatch
+
+Then connect returns a function that takes 1 more parameter: the component.
+
+Define mapStateToProps - takes in state as a parameter (this is the entire Redux state), then you can specify what state you want to map to props
+
+This is all great, but how can we have access to state and actions if we don’t import the store somewhere? We need to import the store at the top level of our app.
+
+We import Provider from ‘react-redux’ and our store in our main index.js. Provider is a component that we’ll wrap our entire app in. The provider component takes one prop, which is the store. This component allows your connect function to have access to the store. It provides access to the store to the connect function, and then connect hooks up your components.
+
+

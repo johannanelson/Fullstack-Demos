@@ -1,0 +1,1 @@
+1. To start, I only have an action type and action creator.

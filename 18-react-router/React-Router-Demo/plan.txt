@@ -1,0 +1,14 @@
+DEMO 101
+- Import browserRouter and wrap component
+- Import route and define routes in main component
+- Make sure that main app component returns a nav bar, then the routes
+- Import Link and replace all a tags in nav bar with the Link component tags
+- Note that even when I change the URL, the component is not updating - this is because of fuzzy matching. Fuzzily matching the first slash to be the other paths as well. To precisely match a path, use "exact path" - for exact path = '/', must be just /, can't have anything else after it
+- Show that no requests are being made
+
+DEMO 201
+- Console log props for a single component - add props in as an argument to the component definition
+- Update syntax from component to render for Routes.
+- First log without passing props in
+- Add a prop in
+- Add routeProps argument to anonymous function - first show not spreading (routeProps = {routeProps}), then spreading ({...routeProps})

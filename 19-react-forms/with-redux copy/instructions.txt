@@ -1,0 +1,7 @@
+Demo goals:
+
+1. Build a submitHandler that demonstrates how the page does not have to refresh
+when we submit a form
+2. Connect our form data to state so we can track changes
+3. Change state for multiple inputs
+4. Controlled vs uncontrolled components

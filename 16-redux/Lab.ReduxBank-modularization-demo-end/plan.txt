@@ -1,0 +1,3 @@
+- Go through main methods
+- Show reducer defined in a separate function then passed into createStore
+- Modularizing our code using action types and action creators
