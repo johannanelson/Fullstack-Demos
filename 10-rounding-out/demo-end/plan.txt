@@ -1,0 +1,18 @@
+Course of action:
+
+1. Go through my code
+2. Custom 404 response
+      - Will go at the bottom of your code so that any url that does not get hit will land here
+3. Custom error handling
+      - Throw error if house doesn't exist (/houses/123 should not work but it currently does!)
+4. Eager loading
+      - When I load /students/1, I only see houseId. I want to see house info as well.
+      - What if I want to see all students associate with houses? Add eager loading to /houses
+5. Class & instance methods
+      - What would happen if we console logged typeof House in db/index.js? What about typeof House()? We get an error sayying it's a class constructor model. All of our models are just constructor functions - so we can create class and instance methods.
+        a) I want a method that gets everything. Is this a class or instance method? Class. Copy the eager loading line from houseRoutes.
+        b) I want a method that gives me a student's wand type.
+
+6. Many to many relationships
+      - Let's change the student-house relationship from one-many to many-many.
+      - Refresh postico to see the new table, and console log the prototype objects to see the new methods!
