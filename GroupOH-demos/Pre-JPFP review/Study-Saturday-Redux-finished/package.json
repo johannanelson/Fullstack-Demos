@@ -1,0 +1,42 @@
+{
+  "name": "study-staturday-week-3",
+  "version": "1.0.0",
+  "description": "fun with react-redux!",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run start-server & npm run build-watch",
+    "start-server": "nodemon --watch server -e js,html main.js",
+    "build-watch": "webpack -w",
+    "seed": "node seed.js"
+  },
+  "author": "myself",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.20.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
+    "express": "^4.16.2",
+    "nodemon": "^2.0.4",
+    "pg": "^8.4.1",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-redux": "^7.2.2",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.3.0",
+    "sequelize": "^6.3.5"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.5",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "faker": "^4.1.0",
+    "morgan": "^1.10.0",
+    "webpack": "^4.29.6",
+    "webpack-cli": "^3.3.0"
+  }
+}
