@@ -1,0 +1,90 @@
+/*
+1. Add starter p rule
+2. First show parent display block (type out parent, child, child:nth child) EXCLUDE FLOAT: LEFT IN .CHILD
+3. If i want my divs to be side by side, I use float left. Add float left line to .child. Float places an element on the left side of its container, so that text can wrap around it; removed from normal flow of the page
+  -- This places elements on the left side of the container so that elements can wrap around it, but it's also removed from the normal flow of the page.
+4. Add flexbox! Ask, where do we display flex? Switch .parent display to flex.
+5. Add flex direction. Do we add this to parent or child?
+6. How do we flex the last div inside parent div? Add display: flex to .alot-of-text!
+7. Remove paragraphs and show examples of flex-grow and flex-shrink in flex items
+8. Responsive design demo - Give example media query
+*/
+
+/* STEP 1 */
+p {
+  margin: 0;
+  padding: 1em;
+  border: 4px solid black;
+}
+
+/* STEP 2: show display: block */
+.parent {
+  /*1. display: block*/
+  /*2. */display: flex;
+  flex-direction: row-reverse;
+  background: powderblue;
+  padding: 1em;
+  border: 4px solid black;
+}
+
+.child {
+  /* 1. float: left; */
+  padding: 1em;
+  border: 4px solid black;
+}
+
+/* Selecting the fourth child */
+.child:nth-child(4) {
+  background: gold;
+}
+
+/* FLEX CHILDREN: FOR FLEX-SHRINK */
+.child {
+
+  border: 4px solid black;
+  flex-basis: 200px;
+  flex-shrink: 1;
+}
+
+.child:nth-child(3) {
+  background: gold;
+  flex-shrink: 3;
+}
+
+/* FLEX CHILDREN: FOR FLEX-GROW */
+.child {
+  /* padding: 1em; */
+  border: 4px solid black;
+  flex-grow: 1;
+}
+
+.child:nth-child(3) {
+  /* could also have done .three */
+  background: gold;
+  flex-grow: 3;
+}
+
+.alot-of-text {
+  display: flex;
+}
+
+.one {
+  /* flex-grow: 1; */
+}
+
+.two {
+  /* flex-shrink: 2; */
+}
+
+.three {
+  /* flex-grow: 1; */
+}
+
+@media (min-width: 300px) and (max-width: 500px) {
+  body {
+    background-color: cornflowerblue;
+  }
+  div {
+    flex-wrap: wrap;
+  }
+}

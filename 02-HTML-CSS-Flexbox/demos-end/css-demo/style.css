@@ -1,0 +1,70 @@
+/*
+  DEMO
+  1. Type html:5
+  2. Add h1 title and start live server
+  3. Add three divs with classes and refresh page
+  /////// START OF CSS WORK ////////
+  4. Add link tag to head with stylesheet reference
+  5. Add div selector
+  6. Add three class selectors and show that elements are getting some styles from div and from classes
+  8. What happens if we add a span tag inside of the div tag? It'll be the color of the corresponding class! What if I wanted that span to be a different color? Could use an #id, .red > span or .red span
+  9. Add selector for being a span and yellow
+  10. Add div around other three divs; could add padding to div rule
+  11. Show combinator tag >.class: add two paragraph elements, one inside div and one below h1. First add p rule, then ask what would happen if you add div > p rule
+  12. Ask about difference between div > p and div p
+  13. Show combinator tag, .class: add thicker border to red and yellow classes
+  11. Add * selector to add box-sizing
+
+
+  Other things I could show:
+      - * selector
+      - specificity (id over class)
+      - block vs inline element */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: verdana;
+}
+
+div {
+  border: solid 1px black;
+  padding: 1rem;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.red {
+  background-color: red;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.red, .yellow {
+  border-width: 5px;
+}
+
+span.yellow {
+  padding: 0.5 rem;
+}
+
+div > p {
+  background-color: purple;
+}
+
+div > span /* OR #purple */ {
+  background-color: purple;
+}
+
+/* To show order of specificity */
+#purple {
+  background-color: orange;
+}
+
+
